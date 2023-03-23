@@ -1,0 +1,37 @@
+%image-border {
+  width: 155px;
+  height: 155px;
+  border: double 4px transparent;
+  border-radius: 80px;
+  background: linear-gradient(#323443, #323443),
+    radial-gradient(circle at top left, rgb(20, 190, 220) 50%, #fff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  &:hover {
+    background-size: 0% 0%;
+  }
+}
+
+%h4-title {
+  font-family: $third-font;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+%text-type {
+  font-family: $second-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.014rem;
+  color: #d6d6d6;
+}
+
+%text-hide-limits{
+    --max-lines: 3;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: var(--max-lines);
+}

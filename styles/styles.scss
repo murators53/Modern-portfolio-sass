@@ -1,0 +1,212 @@
+@import "variables";
+@import "modules";
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+  color: white;
+  height: 100vh;
+}
+
+/* NAVBAR */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4d4d4d;
+  margin: auto;
+  width: 80%;
+  padding: 10px 0;
+
+  &-logo {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: $first-font;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    span {
+      color: crimson;
+    }
+  }
+  &-menu {
+    ul {
+      display: flex;
+      gap: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      flex-direction: row;
+      li {
+        list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+          font-family: $second-font;
+        }
+      }
+    }
+  }
+}
+
+/* TITLEE */
+.title {
+  width: 80%;
+  margin: 50px auto;
+  &-text {
+    font-family: $third-font;
+    font-weight: 700;
+    font-size: 36px;
+    background: linear-gradient(
+      134.01deg,
+      rgba(175, 232, 249, 0.841) 20%,
+      #d7dce1 90%
+    );
+    background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  &-bio {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    &-avatar {
+      img {
+        @extend %image-border;
+      }
+    }
+    &-summer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      h4 {
+        @extend %h4-title;
+        margin-top: 0;
+      }
+      .biography {
+        width: 65%;
+        p {
+          @extend %text-type;
+        }
+      }
+      .social {
+        &-list {
+          gap: 20px;
+          display: flex;
+          flex-direction: row;
+          font-size: 32px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* WHAT I DO JOB */
+.job {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  &-what {
+    h4 {
+      @extend %h4-title;
+    }
+    p {
+      @extend %text-type;
+    }
+  }
+  &-card {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    &-type {
+      width: 250px;
+      position: relative;
+      border-radius: 15px;
+      padding-top: 40px;
+      background: $bg-banner;
+      text-align: center;
+      img {
+        position: absolute;
+        top: -16%;
+        left: 35%;
+        width: 38px;
+        height: 38px;
+        @extend %image-border;
+        padding: 15px;
+        border: double 2px transparent;
+      }
+      h4 {
+        @extend %h4-title;
+        font-size: 16px;
+        padding: 0 8px;
+        font-weight: 500;
+      }
+      p {
+        @extend %text-type;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+/* FEATURED PROJECT */
+.featured {
+  margin: 50px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  h4 {
+    @extend %h4-title;
+    margin-bottom: 0;
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &-project {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-height: 300px;
+    img {
+      width: 40%;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h4 {
+        @extend %text-hide-limits;
+        --max-lines: 1;
+      }
+      p {
+        font-size: 18px;
+        @extend %text-type;
+      }
+      span {
+        @extend %text-type;
+        font-size: 16px;
+        @extend %text-hide-limits;
+      }
+    }
+  }
+
+  .more {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    background: $bg-banner;
+    gap: 20px;
+    padding: 12px 15px;
+    border-radius: 15px;
+    color: #C9C9C9;
+    font-family: $second-font;
+    font-size: 16px;
+  }
+}
