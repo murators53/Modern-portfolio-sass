@@ -186,7 +186,7 @@ body {
 /* TITLEE */
 .title {
   width: 80%;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 @media (max-width: 546px) {
   .title {
@@ -224,6 +224,18 @@ body {
     font-size: 24px;
   }
 }
+@media (min-width: 769px) {
+  .title-text h2 {
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 547px) and (max-width: 768px) {
+  .title-text h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
 .title-bio {
   margin: 50px 0;
   display: flex;
@@ -244,6 +256,7 @@ body {
     flex-direction: column;
     position: relative;
     margin-bottom: 0;
+    margin-top: 35px;
   }
 }
 @media (min-width: 769px) {
@@ -279,6 +292,7 @@ body {
 @media (min-width: 769px) {
   .title-bio-summer {
     align-items: start;
+    gap: 20px;
   }
 }
 .title-bio-summer h4 {
@@ -321,6 +335,11 @@ body {
   color: aqua;
 }
 @media screen and (min-width: 547px) and (max-width: 768px) {
+  .title-bio-summer .social h4 {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 547px) and (max-width: 768px) {
   .title-bio-summer .social {
     position: absolute;
     top: 21%;
@@ -333,7 +352,8 @@ body {
 }
 @media (min-width: 769px) {
   .title-bio-summer .social {
-    width: 200px;
+    width: 230px;
+    padding: 0 40px;
   }
 }
 .title-bio-summer .social-list {
@@ -680,6 +700,7 @@ body {
   .snippet-card {
     gap: 20px;
     margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 547px) and (max-width: 768px) {
@@ -846,31 +867,34 @@ body {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  background-color: rgba(91, 84, 84, 0.26);
-  padding: 50px 0;
+  background-color: #323443;
 }
 @media (max-width: 546px) {
   .footer {
     flex-direction: column;
     gap: 20px;
+    margin-top: 55px;
+    padding: 40px 0;
   }
 }
 @media screen and (min-width: 547px) and (max-width: 768px) {
   .footer {
     gap: 5vw;
-    padding: 10px 25px;
+    padding: 10px 0;
     margin-top: 20px;
   }
 }
 @media (min-width: 769px) {
   .footer {
     margin-top: 20px;
-    padding: 0;
+    padding: 25px 0px;
     gap: 0;
     text-align: center;
   }
 }
 .footer-logo {
+  display: flex;
+  flex-direction: column;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -881,6 +905,11 @@ body {
 @media (min-width: 769px) {
   .footer-logo {
     width: 40%;
+  }
+}
+@media screen and (min-width: 547px) and (max-width: 768px) {
+  .footer-logo {
+    padding-left: 4%;
   }
 }
 @media (max-width: 546px) {
@@ -898,7 +927,7 @@ body {
 }
 @media (min-width: 769px) {
   .footer-logo h1 {
-    font-size: 30px;
+    font-size: 38px;
     text-align: center;
     transform: translate(0%, 220%);
   }
@@ -960,5 +989,5 @@ body {
   }
 }
 .footer-menu ul li:nth-child(1) a {
-  color: red;
+  color: crimson;
 }/*# sourceMappingURL=styles.css.map */
